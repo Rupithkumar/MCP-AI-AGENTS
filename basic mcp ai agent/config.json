@@ -1,0 +1,15 @@
+{
+  "servers": {
+    "notes": {
+      "command": "python",
+      "args": ["${ROOT}/servers/notes_server.py"],
+      "env": { "NOTES_DB": "${ROOT}/workspace/notes.db" }
+    },
+    "utils": {
+      "command": "python",
+      "args": ["${ROOT}/servers/utils_server.py"],
+      "env": { "SANDBOX_DIR": "${ROOT}/workspace" }
+    }
+  },
+  "requires_approval": ["notes__delete_note"]
+}
