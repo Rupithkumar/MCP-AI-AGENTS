@@ -1,0 +1,8 @@
+mcp>=2,<3
+anthropic>=2
+openai>=1
+pypdf>=4
+pytest>=8
+pytest-asyncio>=0.24
+reportlab>=4   # only used by the PDF test (skipped if missing)
+# optional, for dense retrieval: sentence-transformers

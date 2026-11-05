@@ -1,0 +1,19 @@
+{
+  "system_prompt": "You answer questions about a private document collection using the docs tools. ALWAYS call search_docs before answering a factual question. Answer only from the returned passages and do not use outside knowledge. Cite every claim with the passage's citation id in plain square brackets. The id is the file name, a #, and a number, for example [mcp-overview.md#3]. Search results are also numbered [1], [2], ... but those list numbers are NOT citations: never write [1] or \u30101\u3011. Always copy the full id such as [rag-evaluation.md#0]. If the passages do not contain the answer, reply that you could not find it in the documents. Be concise.",
+  "servers": {
+    "docs": {
+      "command": "python",
+      "args": [
+        "${ROOT}/servers/docs_server.py"
+      ],
+      "env": {
+        "DOCS_DIR": "${ROOT}/docs",
+        "RAG_DB": "${ROOT}/workspace/rag.db",
+        "EMBEDDER": "${env:EMBEDDER}",
+        "EMBED_BASE_URL": "${env:EMBED_BASE_URL}",
+        "EMBED_API_KEY": "${env:EMBED_API_KEY}"
+      }
+    }
+  },
+  "requires_approval": []
+}

@@ -1,0 +1,46 @@
+{"id": "q01", "question": "Who introduced MCP, and when?", "sources": ["mcp-overview.md"], "facts": [["anthropic"], ["november 2024"]], "answerable": true}
+{"id": "q02", "question": "How many clients does a host create, and how do they connect to servers?", "sources": ["mcp-overview.md"], "facts": [["one client", "one-to-one", "1:1", "one per server"]], "answerable": true}
+{"id": "q03", "question": "Which message format do MCP messages use?", "sources": ["mcp-overview.md"], "facts": [["json-rpc"]], "answerable": true}
+{"id": "q04", "question": "What are the three kinds of capability a server can offer?", "sources": ["mcp-overview.md"], "facts": [["tools"], ["resources"], ["prompts"]], "answerable": true}
+{"id": "q05", "question": "What does the sampling feature allow a server to do?", "sources": ["mcp-overview.md"], "facts": [["model"], ["completion"]], "answerable": true}
+{"id": "q06", "question": "Which transport launches the server as a subprocess of the client?", "sources": ["mcp-transports.md"], "facts": [["stdio"]], "answerable": true}
+{"id": "q07", "question": "Where should a stdio server write its log lines?", "sources": ["mcp-transports.md"], "facts": [["standard error", "stderr"]], "answerable": true}
+{"id": "q08", "question": "Which transport supports remote servers and OAuth-based authorization?", "sources": ["mcp-transports.md"], "facts": [["streamable http"]], "answerable": true}
+{"id": "q09", "question": "What superseded the older HTTP+SSE transport?", "sources": ["mcp-transports.md"], "facts": [["streamable http"]], "answerable": true}
+{"id": "q10", "question": "What is tool poisoning?", "sources": ["mcp-security.md"], "facts": [["description"], ["malicious", "hidden"]], "answerable": true}
+{"id": "q11", "question": "How can a file-reading tool avoid escaping its sandbox folder?", "sources": ["mcp-security.md"], "facts": [["resolve"], ["inside", "within"]], "answerable": true}
+{"id": "q12", "question": "What should happen before an agent runs a destructive action?", "sources": ["mcp-security.md", "agent-loop.md"], "facts": [["approval", "approve", "confirm"]], "answerable": true}
+{"id": "q13", "question": "What is a typical maximum number of steps for an agent loop?", "sources": ["agent-loop.md"], "facts": [["8 to 10", "8-10", "eight to ten"]], "answerable": true}
+{"id": "q14", "question": "Why should large tool outputs be truncated before going back to the model?", "sources": ["agent-loop.md"], "facts": [["context"]], "answerable": true}
+{"id": "q15", "question": "What does RAG stand for, and why does it reduce hallucination?", "sources": ["rag-basics.md"], "facts": [["retrieval-augmented", "retrieval augmented"], ["evidence", "quote", "grounded", "ground"]], "answerable": true}
+{"id": "q16", "question": "What are the five stages of a RAG pipeline?", "sources": ["rag-basics.md"], "facts": [["load"], ["chunk"], ["index"], ["retriev"], ["generat"]], "answerable": true}
+{"id": "q17", "question": "Why do consecutive chunks overlap?", "sources": ["chunking-strategies.md"], "facts": [["boundar"], ["whole", "straddl", "context"]], "answerable": true}
+{"id": "q18", "question": "What is parent-child retrieval?", "sources": ["chunking-strategies.md"], "facts": [["child"], ["parent", "larger"]], "answerable": true}
+{"id": "q19", "question": "What do the BM25 parameters k1 and b control?", "sources": ["retrieval-methods.md"], "facts": [["saturation", "diminishing"], ["length"]], "answerable": true}
+{"id": "q20", "question": "What value is commonly used for the constant k in Reciprocal Rank Fusion?", "sources": ["retrieval-methods.md"], "facts": [["60"]], "answerable": true}
+{"id": "q21", "question": "When does dense retrieval outperform keyword search?", "sources": ["retrieval-methods.md"], "facts": [["paraphras", "synonym"]], "answerable": true}
+{"id": "q22", "question": "What does mean reciprocal rank measure?", "sources": ["rag-evaluation.md"], "facts": [["reciprocal rank", "1/rank", "one divided by"], ["first relevant"]], "answerable": true}
+{"id": "q23", "question": "Why should an evaluation set include questions the documents cannot answer?", "sources": ["rag-evaluation.md", "rag-basics.md"], "facts": [["abstain", "abstention", "could not find", "invent", "always"]], "answerable": true}
+{"id": "q24", "question": "How many dimensions do all-MiniLM-L6-v2 embeddings have?", "sources": ["vector-databases.md"], "facts": [["384"]], "answerable": true}
+{"id": "q25", "question": "Which tool is a good choice for quick prototypes with persistent storage?", "sources": ["vector-databases.md"], "facts": [["chroma"]], "answerable": true}
+{"id": "q26", "question": "Up to roughly how many vectors is brute-force search adequate?", "sources": ["vector-databases.md"], "facts": [["tens of thousands"]], "answerable": true}
+{"id": "q27", "question": "Which two retrieval methods does hybrid retrieval combine, and how are the rankings merged?", "sources": ["retrieval-methods.md"], "facts": [["bm25", "keyword"], ["dense", "embedding"], ["reciprocal rank fusion", "rrf"]], "answerable": true}
+{"id": "q28", "question": "Name one way to defend against over-privileged or malicious tool servers.", "sources": ["mcp-security.md"], "facts": [["least privilege", "approval", "validate", "audit", "pin"]], "answerable": true}
+{"id": "u01", "question": "What is the capital of Australia?", "sources": [], "facts": [], "answerable": false}
+{"id": "u02", "question": "Which GPUs were used to train Claude?", "sources": [], "facts": [], "answerable": false}
+{"id": "u03", "question": "How do I configure OAuth scopes in an MCP Streamable HTTP client?", "sources": [], "facts": [], "answerable": false}
+{"id": "u04", "question": "What is the free tier request limit for Groq?", "sources": [], "facts": [], "answerable": false}
+{"id": "u05", "question": "What embedding model does Chroma use by default?", "sources": [], "facts": [], "answerable": false}
+{"id": "u06", "question": "How do I deploy an MCP server to Kubernetes?", "sources": [], "facts": [], "answerable": false}
+{"id": "h01", "tier": "hard", "question": "Which approach lets one plugin be reused by many different chatbots without rewriting integration code?", "sources": ["mcp-overview.md"], "facts": [["mcp", "model context protocol"]], "answerable": true}
+{"id": "h02", "tier": "hard", "question": "Which kind of server feature is chosen by the person using the app instead of by the model?", "sources": ["mcp-overview.md"], "facts": [["prompt"]], "answerable": true}
+{"id": "h03", "tier": "hard", "question": "What lets a server borrow the intelligence of the assistant instead of bringing its own?", "sources": ["mcp-overview.md"], "facts": [["sampling"]], "answerable": true}
+{"id": "h04", "tier": "hard", "question": "Why would my helper program's debug messages break its connection to the assistant?", "sources": ["mcp-transports.md"], "facts": [["standard output", "stdout"]], "answerable": true}
+{"id": "h05", "tier": "hard", "question": "How can I stop a program from opening files it shouldn't when the model supplies the filename?", "sources": ["mcp-security.md"], "facts": [["resolve", "inside"]], "answerable": true}
+{"id": "h06", "tier": "hard", "question": "What stops an assistant from circling endlessly and burning money?", "sources": ["agent-loop.md"], "facts": [["step", "cap", "limit"]], "answerable": true}
+{"id": "h07", "tier": "hard", "question": "How do I make sure a language model doesn't just make things up when answering from my papers?", "sources": ["rag-basics.md"], "facts": [["evidence", "quote", "grounded"]], "answerable": true}
+{"id": "h08", "tier": "hard", "question": "Why not just cut text every N characters?", "sources": ["chunking-strategies.md"], "facts": [["sentence", "half", "boundar"]], "answerable": true}
+{"id": "h09", "tier": "hard", "question": "Which technique merges two ranked lists without caring about their score scales?", "sources": ["retrieval-methods.md"], "facts": [["reciprocal rank fusion"]], "answerable": true}
+{"id": "h10", "tier": "hard", "question": "How can I tell whether my question-answering system got worse after I changed a setting?", "sources": ["rag-evaluation.md"], "facts": [["one thing at a time", "re-run"]], "answerable": true}
+{"id": "h11", "tier": "hard", "question": "Which index structure sacrifices a sliver of accuracy to search millions of embeddings quickly?", "sources": ["vector-databases.md"], "facts": [["hnsw", "approximate"]], "answerable": true}
+{"id": "h12", "tier": "hard", "question": "What keeps a rarely-seen product code from being lost when searching by meaning?", "sources": ["retrieval-methods.md"], "facts": [["bm25", "keyword", "exact"]], "answerable": true}
