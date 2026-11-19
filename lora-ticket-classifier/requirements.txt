@@ -1,0 +1,9 @@
+# PyTorch is installed separately (see README step 3) because RTX 50-series cards need a CUDA 12.8+ build.
+transformers>=4.46
+peft>=0.13
+datasets>=2.20
+accelerate>=0.34
+scikit-learn>=1.4
+packaging
+openai>=1.40
+pytest>=8

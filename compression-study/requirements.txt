@@ -1,0 +1,4 @@
+# PyTorch is installed separately (see README step 3) because RTX 50-series cards need a CUDA 12.8+ build.
+numpy>=1.26
+matplotlib>=3.8
+pytest>=8
